@@ -1,0 +1,23 @@
+{
+  "name": "vuejs-study",
+  "version": "1.0.0",
+  "description": "learning vuejs 2 for myself",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server -p 8888 -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whidy/vuejs-study.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whidy/vuejs-study/issues"
+  },
+  "homepage": "https://github.com/whidy/vuejs-study#readme",
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
+}

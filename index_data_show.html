@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>vuejs tutorials</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+  <div id="vue-app">
+    <h1>{{greet('afternoon')}}</h1>
+    <p>Name: {{name}}</p>
+    <p>Job: {{job}}</p>
+    <a v-bind:href="website">my blog</a>
+    <input type="text" name="name" v-bind:value="name" id="">
+    <p v-html="websiteTag"></p>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
