@@ -1,23 +1,47 @@
-new Vue({
-  el: '#vue-app',
-  data: {
-    health: 100,
-    ended: false
+
+Vue.component('greeting', {
+  template: '<p> Hey there, I am a {{name}}. <button v-on:click="changeName">Change name</button></p>',
+  data: function () {
+    return {
+      name: 'Yoshi'
+    }
   },
   methods: {
-    punch: function () {
-      this.health -= Math.random() * 10;
-      if (this.health <= 0) {
-        this.health = 0;
-        this.ended = true;
-      }
-    },
-    restart: function () {
-      this.health = 100;
-      this.ended = false;
+    changeName: function() {
+      this.name = 'Mario';
+    }
+  }
+})
+var one = new Vue({
+  el: '#vue-app-one',
+  data: {
+    title: 'vue app one'
+  },
+  methods: {
+
+  },
+  computed: {
+    greet: function () {
+      return 'hello from app one';
+    }
+  }
+});
+
+var two = new Vue({
+  el: '#vue-app-two',
+  data: {
+    title: 'vue app two'
+  },
+  methods: {
+    changeTitle: function () {
+      one.title = "title changed";
     }
   },
   computed: {
-
+    greet: function () {
+      return 'hello from app two';
+    }
   }
 });
+
+two.title = "changed from outside";
